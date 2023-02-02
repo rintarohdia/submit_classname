@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
+  </head>
+  <body>
+  <div id="read_me">
+    <h1>自動時間割自動登録サイト</h1>
+  <p>個人製作物です。授業の長さで設定した時間に合わせて、授業開始時間から計算された授業終了時刻が自動的に入力されます。</p><p>
+  想定用途：サークル、授業を学期はじめに登録する。</p><p>
+  使い方：</p><p>
+  1,googleカレンダーを開く</p><p>
+  2,授業の長さを記入</p><p>
+  3,授業の概要を記入</p><p>
+  4,submit</p>
+  <p>googleが授業時間を覚えるので多少楽になるはずです。</p>
+</div>
+  <div class="span_of_class">
+    <p>授業の長さ：分で指定
+    <input type="number" id="span" value="0"></input></p>
+  </div>
+<p>授業詳細</p>
+  <div class="clss">
+    <form action="https://script.google.com/macros/s/AKfycbwiow8lvYZwZ1qrC0SQx4YcBalKZT3wCJwASzySB8xmHUy4xUBisfSiA7tkTjsJ0Jph/exec" method="POST">
+    <input type=hidden name="action" value="TEMPLATE"></input>
+    <p><lavel>授業名
+      <input type="text" id="class_name" name="text"></input></p>
+    </lavel>
+    <p><lavel>
+      曜日
+      <select name="dow">
+    	<option value="1">月曜日</option>
+	    <option value="2">火曜日</option>
+	    <option value="3">水曜日</option>
+	    <option value="4">木曜日</option>
+	    <option value="5">金曜日</option>
+	    <option value="6">土曜日</option>
+	    <option value="0">日曜日</option>
+</select></p>
+    </lavel>
+    <p><lavel>
+      授業開始時間
+      <input type="time" name="start_time" id="start_time" value="12:00" onchange="set_time_auto()"></input>
+    </lavel></p>
+    <p><lavel>
+      授業終了時間
+      <input type="time" name="end_time" id="end_time" value="13:00"></input>
+    </lavel></p>
+    <p><lavel>授業場所
+      <input type="text" name="location" id="location"></input></p>
+    </lavel>
+    <p><lavel>持ち物
+      <input type="text"name="details" id="details"></input>
+    </lavel></p>
+  </div>
+<button id="submit">submit</button>
+</form>
+  </body>
+  <footer>
+     <?!= HtmlService.createHtmlOutputFromFile('js').getContent(); ?>
+
+  </footer>
+</html>
