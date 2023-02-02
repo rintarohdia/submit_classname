@@ -1,0 +1,17 @@
+<script>
+var span_box = document.getElementById("span");
+var start_time_box = document.getElementById("start_time");
+var end_time_box = document.getElementById("end_time");
+function set_time_auto(){
+  console.log(span_box);
+  var span=span_box.value;
+  var start_time=start_time_box.value.split(":");
+  var end_time=Number(start_time[0])*60+Number(start_time[1])+Number(span);
+  var min=String(end_time%60);
+  var hour=String((end_time-min)/60%24);
+  var houred=("00"+hour).slice(-2);
+  var mined=("00"+min).slice(-2);
+  end_time_box.value=String(houred)+":"+String(mined);
+}
+
+</script>
