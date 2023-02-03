@@ -14,4 +14,26 @@ function set_time_auto(){
   end_time_box.value=String(houred)+":"+String(mined);
 }
 
+function onFaluer(){
+  alert("失敗しました。作成者に連絡してください")
+}
+function onSuccsess(){
+  alert("成功しました")
+}
+
+function doAction(){
+          var start_time = document.getElementById("start_time").value;
+          var end_time = document.getElementById("end_time").value;
+          var location = document.getElementById("location").value;
+          var details = document.getElementById("details").value;
+          var dow_box = document.getElementById("dow");
+          var num = dow_box.selectedIndex;
+          var dow = document.getElementById("dow").options[num].value;
+          var text = document.getElementById("class_name").value;
+          start_h=start_time[0]+start_time[1]
+          start_m=start_time[3]+start_time[4]
+          end_h=end_time[0]+end_time[1]
+          end_m=end_time[3]+end_time[4]
+          google.script.run.withSuccessHandler(onSuccsess).withFailureHandler(onFaluer).submit(dow,start_h,start_m,end_h,end_m,text);
+       }
 </script>
