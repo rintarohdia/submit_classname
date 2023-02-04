@@ -1,0 +1,16 @@
+<style>
+body{width:100%,hight:100%;font-size:1rem}
+  p{ left:20rem}
+input{ display: block; hight:30rem; width: 100pt; font-size: 15pt; left:10%; postion:abusolute; }
+select{ display: block; hight:rem; width: 100pt; font-size: 15pt; left:10%; postion:abusolute; }
+#class_name{ width: 50%}
+#location{width: 50%}
+#details{width: 50%}
+select{font-size:15pt; width: 150pt }
+button{display:block; position: relative; width: 150pt; font-size: 1rem;top:1rem;}
+lavel{font-size:1.3em}
+a{display:block;}
+
+}
+
+</style>
