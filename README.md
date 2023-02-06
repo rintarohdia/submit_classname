@@ -5,3 +5,4 @@
 現状、submitしてしまうと自動的に画面遷移が起きるシステムになっており、これを解決するためにajaxの実装を考えています  
 追記：02/03 ajaxに対応しました  
 追記：02/04 cssを変更し、レイアウトを整え、スマホ表示の際極端に小さくなる問題に対処しました。
+<https://script.google.com/macros/s/AKfycbxZatR4RjR8JzIDzu8n14ROxYkwdK4VTM_kMKmeC-I/dev>
